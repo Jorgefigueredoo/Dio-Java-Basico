@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SelecaoCandidatos {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que insira o nome do candidato
+        System.out.print("Digite o nome do candidato: ");
+        String nomeCandidato = scanner.nextLine();
+
+        // Solicita ao usuário que insira o salário pretendido
+        System.out.print("Digite o salário pretendido do candidato: ");
+        double salarioPretendido = scanner.nextDouble();
+
+        // Verifica o valor do salário e imprime a mensagem correspondente
+        if (salarioPretendido > 2000) {
+            System.out.println("Candidato " + nomeCandidato + " - Aguardando demais candidatos");
+        } else {
+            System.out.println("Candidato " + nomeCandidato + " - Candidato selecionado");
+        }
+
+        // Fecha o Scanner
+        scanner.close();
+    }
+}
